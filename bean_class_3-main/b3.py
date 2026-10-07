@@ -16,12 +16,10 @@ st.set_page_config(
 
 @st.cache_resource
 def load_model():
-    return joblib.load("knn_dry_bean_model.pkl")
-
+   return joblib.load(r"C:\python\knn_dry_bean_model.pkl")
 @st.cache_data
 def load_data():
-    return pd.read_csv("dry_bean_selected_features.csv")
-
+   return pd.read_csv(r"C:\python\dry_bean_selected_features.csv")
 package = load_model()
 df = load_data()
 
